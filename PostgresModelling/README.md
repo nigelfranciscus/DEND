@@ -42,7 +42,7 @@ Attributes of each table can be found on `sql_queries.py`
 ## How to run:
 
 1. Ensure PostgreSQL is running on localhost.
-1. Run create_tables.py which will create a a database called <ins>sparkifydb</ins> and a user called <ins>student</ins> with password <ins>student</ins>. <p>
+1. Run ``create_tables.py`` which will create a a database called <ins>sparkifydb</ins> and a user called <ins>student</ins> with password <ins>student</ins>. <p>
 `python create_tables.py`
 1. Run etl.py to insert data into tables. <p>`python etl.py`
 1. Check the tables by running example queries using `test.ipynb`.
