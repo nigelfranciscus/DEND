@@ -7,7 +7,7 @@ The purpose of this database is to analyse data collected on songs and user acti
 ## Summary
 Sparkify's ETL project is to model song dataset in PostgreSQL using the star schema. Sample dataset can be found on `data/` directory. The cleaning process is done by first extracting columns for **songs** and **artists**s table from `song_data` follows by duplication check based on the table primary key. Then, based on the `log_data`, each song that is played next, we parse its timestamp into several temporal granularities such as hour, week, month, etc which will be stored in **time** table. Finally, we extract **users** and song play information and load them into their respective table. <br> 
 
-![ETL](images/etl.png){ width=80% }
+![ETL](images/etl.png){ width=60% }
 
 The table structure of **songplays** acts as the fact table with foreign keys to:
 * start_time REFERENCES time (start_time)
