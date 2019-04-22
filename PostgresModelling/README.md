@@ -2,7 +2,7 @@
 
 [![Project Passed](https://img.shields.io/badge/project-passed-success.svg)](https://img.shields.io/badge/project-passed-success.svg)
 
-The purpose of this database is to analyse data collected on songs and user activity. In particular, we want to understand what songs users are listening to. Dataset is in JSON format abd can be retrieved from the [million song dataset](https://labrosa.ee.columbia.edu/millionsong/). The overall process is to extract data from logs into the relational query-ready PostgreSQL. 
+The purpose of this database is to analyse data collected on songs and user activity. In particular, we want to understand what songs users are listening to. Dataset is in JSON format and can be retrieved from the [million song dataset](https://labrosa.ee.columbia.edu/millionsong/). The overall process is to extract data from logs into the relational query-ready PostgreSQL. 
 
 ## Summary
 Sparkify's ETL project is to model song dataset in PostgreSQL using the star schema. Sample dataset can be found on `data/` directory. The cleaning process is done by first extracting columns for **songs** and **artists**s table from `song_data` follows by duplication check based on the table primary key. Then, based on the `log_data`, each song that is played next, we parse its timestamp into several temporal granularities such as hour, week, month, etc which will be stored in **time** table. Finally, we extract **users** and song play information and load them into their respective table. <br> 
